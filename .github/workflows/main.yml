@@ -33,6 +33,10 @@ jobs:
         with:
           name: Build
           path: build/StandaloneWindows
+
+      - name: "Zip"
+        run: "zip -r game.zip build/StandaloneWindows"
+
       - name: Upload built project output to release
         uses: marvinpinto/action-automatic-releases@latest
         with:
@@ -41,6 +45,6 @@ jobs:
             prerelease: false
             title: "Latest Build"
             files: |
-              build/StandaloneWindows/*.exe
+              *.zip
       
               
