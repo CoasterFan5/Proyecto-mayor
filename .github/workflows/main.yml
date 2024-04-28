@@ -29,6 +29,10 @@ jobs:
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
         with:
           targetPlatform: StandaloneWindows
+      - uses: actions/upload-artifact@v3
+        with:
+          name: Build
+          path: build
       - name: Upload built project output to release
         uses: marvinpinto/action-automatic-releases@latest
         with:
@@ -38,4 +42,5 @@ jobs:
             title: "Latest Build"
             files: |
               /build/*.exe
+      
               
