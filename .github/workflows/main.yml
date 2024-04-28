@@ -32,7 +32,7 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           name: Build
-          path: build
+          path: build/StandaloneWindows
       - name: Upload built project output to release
         uses: marvinpinto/action-automatic-releases@latest
         with:
