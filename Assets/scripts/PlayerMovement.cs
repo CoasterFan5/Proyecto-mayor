@@ -31,7 +31,6 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         rigidBody = GetComponent<Rigidbody2D>();
-        goToSpawn();
     }
     private void FixedUpdate()
     {
