@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class answerDetector : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject shapeManager;
+    public int answerIndex = 0;
+
+    private void OnMouseDown()
     {
-        
+        shapeManager.GetComponent<ShapeManagerExperiment>().registerAnswerSelection(answerIndex);
     }
 
     // Update is called once per frame
