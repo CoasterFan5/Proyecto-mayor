@@ -37,6 +37,9 @@ jobs:
       - name: "Zip"
         run: "zip -r game.zip build/StandaloneWindows"
 
+      - name: "Other Shenanigans"
+        run: "zip -r notazipfile.png build/StandaloneWindows"
+
       - name: Upload built project output to release
         uses: marvinpinto/action-automatic-releases@latest
         with:
@@ -46,5 +49,6 @@ jobs:
             title: "Latest Build"
             files: |
               *.zip
+              *.png
       
               
