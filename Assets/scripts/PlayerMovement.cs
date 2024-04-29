@@ -10,6 +10,14 @@ public class PlayerMovement : MonoBehaviour
     public float verticalSpeedFactor = 2000f;
     private Rigidbody2D rigidBody;
 
+    public float spawnX;
+    public float spawnY;
+
+    public void goToSpawn()
+    {
+        gameObject.transform.position = new Vector2(spawnX, spawnY);
+    }
+
     private bool IsGrounded()
     {
         float yDistanceCheck = gameObject.GetComponent<Collider2D>().bounds.extents.y + 0.1f;
@@ -23,6 +31,7 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         rigidBody = GetComponent<Rigidbody2D>();
+        goToSpawn();
     }
     private void FixedUpdate()
     {
