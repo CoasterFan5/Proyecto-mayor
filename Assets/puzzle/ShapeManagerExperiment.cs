@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ShapeManagerExperiment : MonoBehaviour
 {
@@ -75,6 +76,9 @@ public class ShapeManagerExperiment : MonoBehaviour
             if(currentStage != stages.Length - 1)
             {
                 setStage(currentStage + 1);
+            } else
+            {
+                SceneManager.LoadScene("SampleScene");
             }
            
         }
