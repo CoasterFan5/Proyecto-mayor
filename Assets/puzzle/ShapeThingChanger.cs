@@ -8,7 +8,7 @@ public class ShapeThingChanger : MonoBehaviour
     public GameObject[] shapeList;
     public string shapeSortingLayer = "Super Foreground";
     private GameObject cloned;
-    private Boolean activeClone = false;
+    private bool activeClone = false;
 
     public float posX = 0;
     public float posY = 0;
@@ -43,6 +43,7 @@ public class ShapeThingChanger : MonoBehaviour
         cloned.GetComponent<SpriteRenderer>().sortingLayerName = shapeSortingLayer;
         cloned.transform.position = new Vector3(posX, posY, posZ);
         cloned.transform.localScale = new Vector3(scale, scale, scale);
+        activeClone=true;
         
     }
 }

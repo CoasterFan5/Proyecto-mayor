@@ -13,7 +13,8 @@ public class ShapeManagerExperiment : MonoBehaviour
     private int currentStage = 0;
     private Stage[] stages =
     {
-        new Stage("Click the red square", 2, 0, 0)
+        new Stage("Click the green square", 1, 0, 0),
+        new Stage("Click the magenta circle", 2, 1, 2)
     };
 
     // Start is called before the first frame update
@@ -31,7 +32,7 @@ public class ShapeManagerExperiment : MonoBehaviour
     void setStage(int stageIndex)
     {
         acceptingAnswers = true;
-        currentStage = 0;
+        currentStage = stageIndex;
         setShapeManagers(stages[stageIndex].questionShapeIndex);
         setInstructionText(stages[stageIndex].stageInstructions);
     }
@@ -69,6 +70,13 @@ public class ShapeManagerExperiment : MonoBehaviour
                 scirpt.setShape(stages[currentStage].answerShapeIndex);
             }
             acceptingAnswers = false;
+        } else
+        {
+            if(currentStage != stages.Length - 1)
+            {
+                setStage(currentStage + 1);
+            }
+           
         }
     }
 }
