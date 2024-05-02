@@ -17,7 +17,7 @@ public class ShapeManagerExperiment : MonoBehaviour
         new Stage("Click the green square", 1, 0, 0),
         new Stage("Click the magenta circle", 2, 1, 2),
         new Stage("Click the aqua triangle", 0, 3, 4),
-        new Stage("Click the yellow star", 0, 5, 6)
+        new Stage("Click the yellow-green star", 0, 5, 6)
     };
 
     // Start is called before the first frame update
